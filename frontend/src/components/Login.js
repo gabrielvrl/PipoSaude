@@ -3,7 +3,7 @@ import './style.css'
 
 import { AiFillGoogleCircle, AiFillFacebook } from 'react-icons/ai'
 
-function Login(){
+function Login({ history }){
     function handleGoogleLogin(e){
         e.preventDefault()
         console.log("Google Login")
@@ -16,7 +16,12 @@ function Login(){
 
     function handleSubmit(e){
         e.preventDefault()
-        console.log("Submit Button")
+        history.push('/home')
+    }
+
+    function handleSignUp(e){
+        e.preventDefault()
+        history.push('/signup')
     }
 
     return(
@@ -35,7 +40,8 @@ function Login(){
                         <h2>Senha:</h2>
                         <input className="login-input" />
                     </div>
-                    <button onClick={handleSubmit} className="login-button">Submit</button>
+                    <button onClick={handleSubmit} className="login-button">Entrar</button>
+                    <h3 onClick={handleSignUp} id="SignUp" >Não está cadastrado? Cadastre-se!</h3>
                 </div>
             </div>
         </div>
