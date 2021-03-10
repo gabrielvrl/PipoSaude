@@ -14,6 +14,11 @@ function Login(){
         console.log("Facebook Login")
     }
 
+    function handleSubmit(e){
+        e.preventDefault()
+        console.log("Submit Button")
+    }
+
     return(
         <div className="background-container">
             <div className="ui-container">
@@ -30,7 +35,7 @@ function Login(){
                         <h2>Senha:</h2>
                         <input className="login-input" />
                     </div>
-                    <button className="login-button">Submit</button>
+                    <button onClick={handleSubmit} className="login-button">Submit</button>
                 </div>
             </div>
         </div>
