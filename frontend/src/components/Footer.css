@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+.footer-container {
+  margin: 10%;
+  display: flex;
+}
+
+.footer-container .socials {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-container .socials img {
+  height: 35px;
+}
+
+.footer-container .socials .socials-icons {
+  left: 50%;
+}
