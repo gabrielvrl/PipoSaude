@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+div .headerDiv {
+  background-color: #ffffff;
+  max-height: 1300px;
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+div .headerDiv img#logo {
+  width: 198px;
+  max-width: max-content;
+  padding: 15%;
+  cursor: pointer;
+}
