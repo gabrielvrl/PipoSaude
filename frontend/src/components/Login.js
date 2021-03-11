@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.css'
+import './Login.css'
 
 import { AiFillGoogleCircle, AiFillFacebook } from 'react-icons/ai'
 
@@ -25,25 +25,21 @@ function Login({ history }){
     }
 
     return(
-        <div className="background-container">
-            <div className="ui-container">
-                <div className="login-container">
-                    <h1>Login</h1>
-                    <div>
-                        <AiFillGoogleCircle style={{ fontSize:75, marginRight: '3px'}} onClick={handleGoogleLogin} />
-                        <AiFillFacebook style={{ fontSize:75}} onClick={handleFacebookLogin} />
-                    </div>
-                    <h1>ou</h1>
-                    <div>
-                        <h2>Email:</h2>
-                        <input className="login-input" />
-                        <h2>Senha:</h2>
-                        <input className="login-input" />
-                    </div>
-                    <button onClick={handleSubmit} className="login-button">Entrar</button>
-                    <h3 onClick={handleSignUp} id="SignUp" >Não está cadastrado? Cadastre-se!</h3>
-                </div>
+        <div className="login-container">
+            <h1>Login</h1>
+            <div>
+                <AiFillGoogleCircle style={{ fontSize:75, marginRight: '3px', color: 'white'}} onClick={handleGoogleLogin} />
+                <AiFillFacebook style={{ fontSize:75, color:'white'}} onClick={handleFacebookLogin} />
             </div>
+            <h1>ou</h1>
+            <div>
+                <h2>Email:</h2>
+                <input className="login-input" />
+                <h2>Senha:</h2>
+                <input className="login-input" />
+            </div>
+            <button onClick={handleSubmit} className="login-button">Entrar</button>
+            <h3 onClick={handleSignUp} id="SignUp" >Não está cadastrado? Cadastre-se!</h3>
         </div>
     )
 }
