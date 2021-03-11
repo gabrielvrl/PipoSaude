@@ -56,17 +56,3 @@ h3#SignUp {
 h3#SignUp:hover {
   color: #ff6880;
 }
-
-.home-container {
-  background-color: transparent;
-
-  border: 0;
-  border-radius: 40px;
-
-  display: flex;
-  justify-content: first baseline;
-  align-items: baseline;
-  flex-direction: column;
-  height: 90%;
-  width: 90%;
-}
