@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Login.css'
 
+import validator from 'validator'
 import { AiFillGoogleCircle, AiFillFacebook } from 'react-icons/ai'
 
 function Login({ history }){
@@ -24,6 +25,17 @@ function Login({ history }){
         history.push('/signup')
     }
 
+    const [emailError, setEmailError] = useState('') 
+    const validateEmail = (e) => { 
+      var email = e.target.value 
+    
+      if (validator.isEmail(email)) { 
+        setEmailError('Valid Email :)') 
+      } else { 
+        setEmailError('Enter valid Email!') 
+      } 
+    } 
+
     return(
         <div className="login-container">
             <h1>Login</h1>
@@ -32,11 +44,13 @@ function Login({ history }){
                 <AiFillFacebook style={{ fontSize:75, color:'white'}} onClick={handleFacebookLogin} />
             </div>
             <h1>ou</h1>
-            <div>
+            <div className="input-container">
                 <h2>Email:</h2>
-                <input className="login-input" />
+                <input className="login-input" type="email" name="email" placeholder="Digite seu email" onChange={(e) => validateEmail(e)} />
+                <br />
+                <span>{emailError}</span>
                 <h2>Senha:</h2>
-                <input className="login-input" />
+                <input className="login-input" type="password" name="password" placeholder="Digite sua senha" />
             </div>
             <button onClick={handleSubmit} className="login-button">Entrar</button>
             <h3 onClick={handleSignUp} id="SignUp" >Não está cadastrado? Cadastre-se!</h3>

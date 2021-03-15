@@ -56,3 +56,7 @@ h3#SignUp {
 h3#SignUp:hover {
   color: #ff6880;
 }
+
+.login-container span{
+  color: white;
+}
