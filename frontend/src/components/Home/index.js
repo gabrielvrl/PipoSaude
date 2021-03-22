@@ -3,9 +3,10 @@ import './Home.css'
 
 import { AiFillPlusCircle } from 'react-icons/ai'
 
-function Home(){
+function Home(props){
     const name = 'Tio Patinhas Bank'
     const employeesNumber = "16"
+    console.log(props.state)
 
     function handleClick(e){
         e.preventDefault()
@@ -21,7 +22,7 @@ function Home(){
                 <h3>Você tem {employeesNumber} funcionários atualmente</h3>
             </div>
             <div className="home-add-new-employee">
-                <AiFillPlusCircle id="add-button" /> <h3>Adicionar novo funcionário</h3>
+                <AiFillPlusCircle id="add-button" onClick={handleClick} /> <h3>Adicionar novo funcionário</h3>
             </div>
         </div>
     )

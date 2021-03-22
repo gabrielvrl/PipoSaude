@@ -5,6 +5,9 @@ import validator from 'validator'
 import { AiFillGoogleCircle, AiFillFacebook } from 'react-icons/ai'
 
 function Login({ history }){
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
     function handleGoogleLogin(e){
         e.preventDefault()
         console.log("Google Login")
@@ -17,7 +20,10 @@ function Login({ history }){
 
     function handleSubmit(e){
         e.preventDefault()
-        history.push('/home')
+        history.push({ 
+            pathname: '/home',
+            state: { email }
+        })
     }
 
     function handleSignUp(e){
@@ -30,6 +36,7 @@ function Login({ history }){
       var email = e.target.value 
     
       if (validator.isEmail(email)) { 
+        setEmail(email)
         setEmailError('Valid Email :)') 
       } else { 
         setEmailError('Enter valid Email!') 
@@ -46,7 +53,7 @@ function Login({ history }){
             <h1>ou</h1>
             <div className="input-container">
                 <h2>Email:</h2>
-                <input className="login-input" type="email" name="email" placeholder="Digite seu email" onChange={(e) => validateEmail(e)} />
+                <input className="login-input" id="email" type="email" name="email" placeholder="Digite seu email" onChange={(e) => validateEmail(e)} />
                 <br />
                 <span>{emailError}</span>
                 <h2>Senha:</h2>
