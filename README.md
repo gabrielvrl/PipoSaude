@@ -18,10 +18,11 @@
 ## :pushpin: Table of Contents
 
 -   [Features](#rocket-features)
+    -   [Login](#computer-login)
 
 ## :rocket: Features
 
-### Login
+### :computer: Login
 
  <p align="center">
    <img src=".github/images/homePipo.gif" width="575" style="margin-right: 10px; margin-bottom: 5rem"/>
